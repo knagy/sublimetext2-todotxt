@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>name</key>
+		<string>Todo.txt</string>
+		<key>scopeName</key>
+		<string>text.todotxt</string>
+		<key>fileTypes</key>
+		<array>
+			<string>todo.txt</string>
+		</array>
+		<key>patterns</key>
+		<array>
+			<!-- Completed task -->
+			<dict>
+				<key>name</key>
+				<string>comment.completed.todotxt</string>
+				<key>match</key>
+				<string>^x .*$</string>
+			</dict>
+			<!-- Priority (high) -->
+			<dict>
+				<key>name</key>
+				<string>constant.other.priority.high.todotxt</string>
+				<key>match</key>
+				<string>^\(A\)(?&lt;! )</string>
+			</dict>
+			<!-- Priority (medium) -->
+			<dict>
+				<key>name</key>
+				<string>constant.other.priority.medium.todotxt</string>
+				<key>match</key>
+				<string>^\(B\)(?&lt;! )</string>
+			</dict>
+			<!-- Priority (low) -->
+			<dict>
+				<key>name</key>
+				<string>constant.other.priority.low.todotxt</string>
+				<key>match</key>
+				<string>^\(C\)(?&lt;! )</string>
+			</dict>
+			<!-- Context (@value) -->
+			<dict>
+				<key>captures</key>
+				<dict>
+					<key>2</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.context.todotxt</string>
+					</dict>
+				</dict>
+				<key>name</key>
+				<string>keyword.context.todotxt</string>
+				<key>match</key>
+				<string>(?&lt;=^|\s)(@)\S*</string>
+			</dict>
+			<!-- Project (+value) -->
+			<dict>
+				<key>captures</key>
+				<dict>
+					<key>2</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.project.todotxt</string>
+					</dict>
+				</dict>
+				<key>name</key>
+				<string>keyword.other.project.todotxt</string>
+				<key>match</key>
+				<string>(?&lt;=^|\s)(\+)\S+</string>
+			</dict>
+			<!-- Add-on (key:value) -->
+			<dict>
+				<key>captures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>variable.addon.todotxt</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.separator.key-value.addon.todotxt</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>name</key>
+						<string>string.addon.todotxt</string>
+					</dict>
+				</dict>
+				<key>name</key>
+				<string>meta.structure.addon.todotxt</string>
+				<key>match</key>
+				<string>(?&lt;=^|\s)(\S+)(:)(\S+)</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
