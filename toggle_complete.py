@@ -5,8 +5,10 @@ class ToggleCompleteCommand(sublime_plugin.TextCommand):
 		for region in self.view.sel():
 			line = self.view.line(region)
 			
-			result = re.match(r"^x ", self.view.substr(line))
-			if result:
-				self.view.replace(edit, sublime.Region(line.begin(), line.begin() + 13), "")
+			data = self.view.substr(line)
+			if re.match(r"^x [0-9]{4}-[0-9]{2}-[0-9]{2} ", data):
+				self.view.erase(edit, sublime.Region(line.begin(), line.begin() + 13))
+			elif re.match(r"^x ", data):
+				self.view.erase(edit, sublime.Region(line.begin(), line.begin() + 2))
 			else:
 				self.view.insert(edit, line.begin(), "x " + datetime.date.today().isoformat() + " ")
