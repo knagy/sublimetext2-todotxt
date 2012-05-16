@@ -1,4 +1,15 @@
-sublimetext2-todotxt
-====================
+Todo.txt for Sublime Text 2
+===========================
 
-Sublime Text 2 package for todo.txt
+Todo.txt syntax highlighting and keyboard shortcuts. [About todo.txt](http://todotxt.com/).
+
+- `Ctrl+K` `Ctrl+R`  
+  Remove priority from task
+- `Ctrl+K` `Ctrl+H`  
+  Set task priority to high
+- `Ctrl+K` `Ctrl+M`  
+  Set task priority to medium
+- `Ctrl+K` `Ctrl+L`  
+  Set task priority to low
+- `Ctrl+K` `Ctrl+D`  
+  Toggle done/undone
