@@ -1,0 +1,45 @@
+[
+	{
+		"keys": ["ctrl+k", "ctrl+r"],
+		"command": "set_priority",
+		"context":
+		[
+			{ "key": "selector", "operand": "text.todotxt" }
+		]
+	},
+	{
+		"keys": ["ctrl+k", "ctrl+h"],
+		"command": "set_priority",
+		"args": { "priority": "(A)" },
+		"context":
+		[
+			{ "key": "selector", "operand": "text.todotxt" }
+		]
+	},
+	{
+		"keys": ["ctrl+k", "ctrl+m"],
+		"command": "set_priority",
+		"args": { "priority": "(B)" },
+		"context":
+		[
+			{ "key": "selector", "operand": "text.todotxt" }
+		]
+	},
+	{
+		"keys": ["ctrl+k", "ctrl+l"],
+		"command": "set_priority",
+		"args": { "priority": "(C)" },
+		"context":
+		[
+			{ "key": "selector", "operand": "text.todotxt" }
+		]
+	},
+	{
+		"keys": ["ctrl+k", "ctrl+d"],
+		"command": "toggle_complete",
+		"context":
+		[
+			{ "key": "selector", "operand": "text.todotxt" }
+		]
+	}
+]
