@@ -40,6 +40,13 @@
 				<key>match</key>
 				<string>^\(C\)(?&lt;! )</string>
 			</dict>
+			<!-- Priority (other) -->
+			<dict>
+				<key>name</key>
+				<string>constant.other.priority.other.todotxt</string>
+				<key>match</key>
+				<string>^\([D-Z]\)(?&lt;! )</string>
+			</dict>
 			<!-- Context (@value) -->
 			<dict>
 				<key>captures</key>

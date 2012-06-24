@@ -41,5 +41,21 @@
 		[
 			{ "key": "selector", "operand": "text.todotxt" }
 		]
+	},
+	{
+		"keys": ["ctrl+alt+keypad_plus"],
+		"command": "increase_priority",
+		"context":
+		[
+			{ "key": "selector", "operand": "text.todotxt" }
+		]
+	},
+	{
+		"keys": ["ctrl+alt+keypad_minus"],
+		"command": "decrease_priority",
+		"context":
+		[
+			{ "key": "selector", "operand": "text.todotxt" }
+		]
 	}
 ]
